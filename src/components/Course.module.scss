@@ -1,0 +1,52 @@
+
+.main{
+  text-decoration: none;
+  color: black;
+}
+.course{
+  position: relative; 
+  margin:5px 2px;
+  background-color: #fafafa;
+}
+.image{
+  width: 100px;
+  height:80px;
+  padding:10px;
+  background-color: #ebebeb;
+}
+.price{
+  text-align: left;
+  font-size: x-small;
+  margin-bottom: 15px;
+}
+.name{
+  font-size: small;
+  margin:2px;
+}
+.author{
+  font-size: small;
+  margin:2px;
+}
+.rate{
+  font-size: x-small;
+  margin:5px;
+  text-align: left;
+}
+.showQuicklook{
+  visibility: hidden;
+}
+.quicklook{
+  position: absolute;
+  top:75px;
+  width:70%;
+  margin:0 auto;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(243, 237, 237);
+  font-size: x-small;
+}
+
+
+.outer{
+  position: relative;
+}

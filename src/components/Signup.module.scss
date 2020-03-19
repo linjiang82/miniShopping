@@ -1,0 +1,51 @@
+@import 'base';
+.input {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+}
+.form {
+  border: 1px solid black;
+  /* border-radius: 10px; */
+  /* background-color: white; */
+  margin: 80px;
+  padding-bottom: 10px;
+}
+.title {
+  padding: 20px 0;
+  font-weight: bold;
+}
+.submit {
+  color:white;
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  background-image: btnColor;
+  padding: 6px;
+}
+.label {
+  font-size: 0.6em;
+  font-weight: bold;
+  vertical-align: 20%;
+}
+.redirectLogin {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 0.7em;
+}
+.eyeCtn {
+  position: relative;
+}
+.eye {
+  color:grey;
+  position: absolute;
+  top: 2px;
+  right: calc(25%);
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 768px;
+    margin: 80px auto;
+  }
+}

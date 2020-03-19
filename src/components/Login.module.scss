@@ -1,0 +1,65 @@
+@import "base";
+.loginBtn {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  color: rgb(63, 63, 73);
+}
+.signuplink {
+  text-decoration: underline;
+}
+.form {
+  border: 1px solid grey;
+  margin: 50px auto;
+  width: 30%;
+  padding: 50px;
+  .title {
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .inputWrapper {
+    background-color: white;
+    margin: 10px auto;
+    width: 80%;
+    height: 28px;
+    text-align: left;
+    padding-left: 4px;
+  }
+  .checkboxWrapper {
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+    .checkbox {
+      font-size: x-small;
+      margin-top: 1px;
+      margin-bottom: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+  .signupWrapper {
+    font-size: x-small;
+    margin-top: 20px;
+  }
+}
+.icon {
+  /* position: absolute; */
+  color: grey;
+  margin-right: 2px;
+  /* top:3px; */
+  /* left:211px; */
+  /*  top: 50px;*/
+  /* float:left; */
+}
+.input {
+  height: 20px;
+  margin: 5px;
+  border: 0;
+}
+.btn {
+  background-image: $btnColor;
+  width: 80%;
+  height: 28px;
+  color: white;
+  margin-top: 50px;
+}

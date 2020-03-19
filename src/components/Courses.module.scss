@@ -1,0 +1,76 @@
+@import 'base';
+.courses{
+  position: relative;
+  width:100%;
+}
+.flexCtn{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.popover{
+  // display: none;
+  width:100vw;
+  height:100vh;
+  margin:0 auto;
+  background-color: rgb(83, 81, 81);
+  position: absolute;
+  opacity: 90%;
+  z-index: 99;
+}
+.icon{
+  position: absolute;
+  right:5px;
+  top:5px;
+}
+.quicklook{
+  vertical-align: middle;
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  background-color: white;;
+  width:70%;
+  height:70%;
+  margin: 0 auto;
+}
+.avatar{
+  width:100%;
+  margin-top:30px;
+}
+.lhs{
+  float:left;
+  width:60%;
+  height: 100%;
+}
+.rhs{
+  height: 100%;
+  text-align:left;
+  float:right;
+  width:30%;
+  margin-left:30px;
+}
+.author{
+  margin-top:30px;
+  color:grey;
+  font-size:x-small;
+}
+.name{
+  margin-top:5px;
+  color:black;
+  font-size: initial;
+}
+.price{
+  margin-top:30px;
+  color:black;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.rate{
+  margin-top:5px;
+  color:grey;
+}
+.btn{
+  margin-top:50px;
+  color:white;
+  background-image: $btnColor;
+}
