@@ -20,4 +20,5 @@ const useFetchCat = () => {
   }, []);
   return categoryList;
 };
+
 export default useFetchCat;
