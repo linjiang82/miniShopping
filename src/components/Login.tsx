@@ -31,10 +31,7 @@ const mapStateToProps = (state: TRootReducer): IProps => {
     login: state.login
   };
 };
-interface iProps {
-  login: TLogin;
-}
-const Login: React.FC<iProps & RouteComponentProps> = props => {
+const Login: React.FC<IProps & RouteComponentProps> = props => {
   console.log(props);
   function gotoLoginPage() {
     if (auth.currentUser !== null) {
