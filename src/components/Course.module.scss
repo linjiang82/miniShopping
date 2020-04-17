@@ -37,9 +37,10 @@
 }
 .quicklook{
   position: absolute;
-  top:75px;
   width:70%;
-  margin:0 auto;
+  top:75px;
+  left:50%;
+  margin-left:-47px;
   padding: 5px;
   text-align: center;
   background-color: rgb(243, 237, 237);
