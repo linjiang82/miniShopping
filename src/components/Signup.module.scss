@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 .input {
   display: block;
   margin: 10px auto;
@@ -16,11 +16,11 @@
   font-weight: bold;
 }
 .submit {
-  color:white;
+  color: white;
   display: block;
   margin: 20px auto;
   width: 50%;
-  background-image: btnColor;
+  background-image: $btnColor;
   padding: 6px;
 }
 .label {
@@ -37,7 +37,7 @@
   position: relative;
 }
 .eye {
-  color:grey;
+  color: grey;
   position: absolute;
   top: 2px;
   right: calc(25%);

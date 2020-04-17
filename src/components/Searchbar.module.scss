@@ -1,0 +1,25 @@
+@import "base";
+
+.searchbar {
+  margin: $headerMargin;
+}
+.select {
+  border-radius: 0px !important;
+  height: 30px;
+}
+.iconWrap {
+  display: inline-block;
+  background-color: #febd69;
+  padding: 1px;
+  vertical-align: middle;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+.icon {
+  vertical-align: middle;
+  size: small;
+}
+.input {
+  height: 24px;
+}

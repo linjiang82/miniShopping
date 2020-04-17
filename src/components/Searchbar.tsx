@@ -1,3 +1,8 @@
+/*Feature: used useDispatch instead of store.dispatch in React Function Component;
+created a custom hook useFetchCat, which used here and in Component Nav.
+used useRef and implemented autoFocus after selecting an option
+*/
+
 import React, { useState, useEffect, useRef } from "react";
 import { passCatId, passKeyword } from "../actions/action";
 import { useDispatch } from "react-redux";
@@ -38,16 +43,16 @@ const Searchbar: React.FC = () => {
     <div className={styles.searchbar}>
       <select
         ref={selectRef}
+        //once an option was selected, focus to the input tag
         onChange={() => inputRef.current?.focus()}
         className={styles.select}>
         {options}
       </select>
       <input ref={inputRef} type='text' className={styles.input}></input>
-      <span className={styles.iconWrap}>
+      <span className={styles.iconWrap} onClick={doSearch}>
         <FontAwesomeIcon
           icon={faSearch}
-          className={styles.icon}
-          onClick={doSearch}></FontAwesomeIcon>
+          className={styles.icon}></FontAwesomeIcon>
       </span>
     </div>
   );
