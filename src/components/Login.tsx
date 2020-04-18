@@ -1,57 +1,44 @@
 //Learnt React Hooks and put React.FC in practice
 import * as React from "react";
-import firebase from "firebase";
 import { auth } from "../firebase/config";
 import { Link, withRouter, RouteComponentProps } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { MouseEvent } from "react";
-import {
-  TRootReducer,
-  TLogin,
-  LOGIN_OK,
-  LOGOUT_OK,
-  TLoginAction,
-  TLogoutAction
-} from "../types/types";
+import { TRootReducer, TLogin, LOGIN_OK, LOGOUT_OK } from "../types/types";
 import { connect } from "react-redux";
 import store from "../store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faUserCircle,
-  faEnvelope,
-  faLock
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
 interface IProps {
   login: TLogin;
 }
 const mapStateToProps = (state: TRootReducer): IProps => {
   return {
-    login: state.login
+    login: state.login,
   };
 };
-const Login: React.FC<IProps & RouteComponentProps> = props => {
-  console.log(props);
+const Login: React.FC<IProps & RouteComponentProps> = (props) => {
   function gotoLoginPage() {
-    if (auth.currentUser !== null) {
+    if (props.login.isLogin) {
+      console.log(auth.currentUser);
       auth.signOut();
       store.dispatch({ type: LOGOUT_OK });
     } else props.history.push("/login");
   }
 
   return (
-    <button className={styles.loginBtn} onClick={gotoLoginPage}>
-      {props.login.isLogin ? "Logout" : "Login/SignUp"}
-    </button>
+    <div className={styles.loginBtn} onClick={gotoLoginPage}>
+      {props.login.isLogin ? "Logout" : "Login"}
+    </div>
   );
 };
 const LoginConnected = withRouter(connect(mapStateToProps)(Login));
 
-const LoginPage: React.FC<RouteComponentProps> = props => {
+const LoginPage: React.FC<RouteComponentProps> = (props) => {
   const emailRef = React.useRef<HTMLInputElement>(null);
   const passwordRef = React.useRef<HTMLInputElement>(null);
-  auth.onAuthStateChanged(user => {
+  auth.onAuthStateChanged((user) => {
     if (user) {
       store.dispatch({ type: LOGIN_OK, user: user });
       props.history.push("/");
@@ -64,7 +51,7 @@ const LoginPage: React.FC<RouteComponentProps> = props => {
           emailRef.current.value,
           passwordRef.current.value
         )
-        .catch(e => console.log(e));
+        .catch((e) => console.log(e));
     }
   }
   function onEnter(e: React.KeyboardEvent<HTMLInputElement>): void {
@@ -75,7 +62,7 @@ const LoginPage: React.FC<RouteComponentProps> = props => {
             emailRef.current.value,
             passwordRef.current.value
           )
-          .catch(e => console.log(e));
+          .catch((e) => console.log(e));
       }
     }
   }

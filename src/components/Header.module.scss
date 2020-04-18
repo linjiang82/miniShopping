@@ -1,3 +1,4 @@
+@import "base";
 .header {
   height: 50px;
   background-color: #232f3e;
@@ -9,4 +10,27 @@
   width: 97px;
   height: 30px;
   margin: 10px 0 0 15px;
+  cursor: pointer;
+}
+.searchbar {
+  margin: $headerMargin;
+}
+.login {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 812px) {
+  .header {
+    height: 80px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .searchbar {
+    display: block;
+    order: 2;
+    width: 100%;
+    text-align: left;
+  }
 }

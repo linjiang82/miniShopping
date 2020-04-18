@@ -1,21 +1,27 @@
 @import "base";
 .loginBtn {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  color: rgb(63, 63, 73);
+  color: white;
+  font-size: small;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 10px;
+}
+.loginText {
+  vertical-align: middle;
 }
 .signuplink {
   text-decoration: underline;
 }
 .form {
-  border: 1px solid grey;
-  margin: 50px auto;
+  border: 1px solid black;
+  margin: 10px auto;
   width: 30%;
   padding: 50px;
   .title {
     font-weight: bold;
-    margin-bottom: 30px;
+    margin: 30px;
   }
   .inputWrapper {
     background-color: white;
@@ -62,4 +68,11 @@
   height: 28px;
   color: white;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 812px) {
+  .form {
+    width: 80%;
+    padding: 10px;
+  }
 }

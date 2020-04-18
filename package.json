@@ -2,6 +2,7 @@
   "name": "medium",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ausmover.ddns.net",
   "dependencies": {
     "@firebase/firestore-types": "^1.10.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",

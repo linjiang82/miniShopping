@@ -1,8 +1,5 @@
 @import "base";
 
-.searchbar {
-  margin: $headerMargin;
-}
 .select {
   border-radius: 0px !important;
   height: 30px;
@@ -15,6 +12,7 @@
   height: 28px;
   width: 28px;
   cursor: pointer;
+  text-align: center;
 }
 .icon {
   vertical-align: middle;

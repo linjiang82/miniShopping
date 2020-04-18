@@ -43,9 +43,10 @@
   right: calc(25%);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 812px) {
   .form {
-    width: 768px;
-    margin: 80px auto;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
   }
 }

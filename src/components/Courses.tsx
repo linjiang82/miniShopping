@@ -62,15 +62,16 @@ const Courses: React.FC = () => {
     setCourse(coursesState.find((i) => i.id === quicklookId));
   }, [coursesState, quicklookId]);
   useEffect(() => {
-    db.collection("Courses")
-      .get()
-      .then((snapshot) =>
-        snapshot.forEach((doc) =>
-          store.dispatch(fetchCourses({ ...doc.data(), id: doc.id }))
+    if (coursesState.length === 0)
+      db.collection("Courses")
+        .get()
+        .then((snapshot) =>
+          snapshot.forEach((doc) =>
+            store.dispatch(fetchCourses({ ...doc.data(), id: doc.id }))
+          )
         )
-      )
-      .catch((e) => console.log("error" + e));
-  }, []);
+        .catch((e) => console.log("error" + e));
+  }, [coursesState]);
   return (
     <div className={styles.courses}>
       {courseState !== undefined && (

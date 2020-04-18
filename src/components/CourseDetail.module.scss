@@ -1,112 +1,110 @@
-body{
- background-color:beige;
+body {
+  background-color: beige;
 }
-.parent{
-  border:1px solid black;
+.parent {
+  border: 1px solid black;
 }
 
-.gridCtn{
- background-color: beige;
- border:1px solid gray;
- width:360px;
- height:500px;
- margin:70px auto;
- display:grid;
- grid-template-columns:1fr 1fr 1fr;
- grid-template-rows: auto; 
- grid-template-areas: 
- "image image name"
- "image image author"
- "tuition rate ."
- "prerequisite prerequisite prerequisite"
- "content content content"
+.gridCtn {
+  background-color: beige;
+  border: 1px solid gray;
+  width: 360px;
+  height: 500px;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "image image name"
+    "image image author"
+    "tuition rate ."
+    "prerequisite prerequisite prerequisite"
+    "content content content";
 }
-.image{
-width:150px; 
-height:200px; 
-grid-area:image;
+.image {
+  width: 150px;
+  height: 200px;
+  grid-area: image;
 }
-.smallImage{
-  width:30px;
-  height:30px;
+.smallImage {
+  width: 30px;
+  height: 30px;
 }
-.name{
- align-self:center;
-grid-area:name;
+.name {
+  align-self: center;
+  grid-area: name;
 }
-.author{
- align-self:center;
-grid-area:author;
+.author {
+  align-self: center;
+  grid-area: author;
 }
-.rate{
-grid-area:rate;
+.rate {
+  grid-area: rate;
 }
-.tuition{
-grid-area:tuition;
+.tuition {
+  grid-area: tuition;
 }
-.content{
-grid-area:content;
-list-style: none;
-text-align:left;
-padding-left:5px;
+.content {
+  grid-area: content;
+  list-style: none;
+  text-align: left;
+  padding-left: 5px;
 }
-.prerequisite{
-grid-area:prerequisite;
-text-align:left;
-padding-left:5px;
+.prerequisite {
+  grid-area: prerequisite;
+  text-align: left;
+  padding-left: 5px;
 }
-.popover{
+.popover {
   // display: none;
-  width:100vw;
-  height:100%;
-  margin:0 auto;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
   background-color: rgb(83, 81, 81);
   position: absolute;
-  opacity: 90%;
+  opacity: 0.9;
   z-index: 99;
 }
-.moreImgCtn{
+.moreImgCtn {
   margin: 0 auto;
-  margin-top:30px;
-  width:450px;
+  margin-top: 30px;
+  width: 450px;
   background-color: white;
-  ::after{
-    content:'';
-    display:table;
-    clear:both;
+  ::after {
+    content: "";
+    display: table;
+    clear: both;
   }
-  .moreImgTitle{
+  .moreImgTitle {
     background-color: rgb(224, 220, 220);
     border-bottom: 1px;
-    .title{
+    .title {
       float: left;
-      margin-left:10px;
+      margin-left: 10px;
     }
-    .icon{
-      float:right;
-      margin-right:10px;
-    }
-  }
-  .moreImgContent{
-    margin:10px;
-    .currentImg{
-      width:300px;
-      height:400px;
+    .icon {
+      float: right;
+      margin-right: 10px;
     }
   }
+  .moreImgContent {
+    margin: 10px;
+    .currentImg {
+      width: 300px;
+      height: 400px;
+    }
+  }
 }
-.moreimg{
-  width:60px;
-  height:60px;
+.moreimg {
+  width: 60px;
+  height: 60px;
 }
-.currentImg{
-  float:left;
+.currentImg {
+  float: left;
 }
-.rhs{
-  float:right;
-  .moreImgList{
+.rhs {
+  float: right;
+  .moreImgList {
     list-style: none;
   }
 }
-
-
