@@ -3,6 +3,8 @@ import "./App.css";
 import Courses from "./components/Courses";
 import CourseDetail from "./components/CourseDetail";
 import Signup from "./components/Signup";
+import Admin from "./components/admin";
+import ProductEdit from "./components/ProductEdit";
 import { LoginPage } from "./components/Login";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
@@ -13,12 +15,26 @@ const App: React.FC = () => {
     <Router>
       <Provider store={store}>
         <div className='App'>
-          <Header></Header>
           <Switch>
-            <Route path='/' exact component={Courses}></Route>
-            <Route path='/detail/:id' exact component={CourseDetail}></Route>
-            <Route path='/login' exact component={LoginPage}></Route>
-            <Route path='/signup' exact component={Signup}></Route>
+            <Route path='/admin' exact component={Admin}></Route>
+            <Route
+              path='/admin/edit/:category/:id'
+              exact
+              component={ProductEdit}></Route>
+            ()=>
+            {
+              <div>
+                <Header></Header>
+                <Route path='/' exact component={Courses}></Route>
+                <Route
+                  path='/detail/:id'
+                  exact
+                  component={CourseDetail}></Route>
+
+                <Route path='/login' exact component={LoginPage}></Route>
+                <Route path='/signup' exact component={Signup}></Route>
+              </div>
+            }
           </Switch>
         </div>
       </Provider>
@@ -26,8 +42,4 @@ const App: React.FC = () => {
   );
 };
 
-function add(x: number, y: number) {
-  return x + y;
-}
-
-export { App as default, add };
+export { App as default };
