@@ -1,0 +1,16 @@
+@import "base";
+.cartIcon {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/35/gno/sprites/nav-sprite-global_bluebeacon-1x_optimized_layout1._CB468500794_.png);
+  background-position: -10px -340px;
+  width: 38px;
+  height: 26px;
+  margin: $headerMargin;
+  margin-left: auto;
+}
+.cartCount {
+  color: #f08804;
+  font-weight: 700;
+  position: relative;
+  top: -3px;
+  left: 4px;
+}
